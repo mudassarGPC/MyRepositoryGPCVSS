@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start chrome \"C:\\\\Khattab\\\\AIProjects\\\\MyPortfolio\\\\index.html\")",
+      "Bash(Start-Process \"chrome.exe\" \"C:\\\\Khattab\\\\AIProjects\\\\MyPortfolio\\\\index.html\")",
+      "Bash(cmd.exe /c start chrome \"C:\\\\Khattab\\\\AIProjects\\\\MyPortfolio\\\\index.html\")",
+      "Bash(git --version)",
+      "Bash(git config:*)",
+      "Bash(Test-Path .git)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)"
+    ]
+  }
+}

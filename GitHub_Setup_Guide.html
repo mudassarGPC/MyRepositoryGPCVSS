@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Setup for Dummies - Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 30px 0;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 15px;
+        }
+        .checkmark {
+            color: #27ae60;
+        }
+        .xmark {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Setup for Dummies - Complete Guide</h1>
+        <p class="subtitle">A beginner-friendly guide to setting up GitHub with Visual Studio Code for your portfolio project.</p>
+
+        <hr>
+
+        <h2>PART 1: What You Need to Install</h2>
+
+        <h3>Git</h3>
+        <ul>
+            <li><strong>Status:</strong> Check if installed by opening Command Prompt or PowerShell and typing:
+                <pre><code>git --version</code></pre>
+            </li>
+            <li><strong>If not installed:</strong>
+                <ol>
+                    <li>Go to <a href="https://git-scm.com/download/win" target="_blank">https://git-scm.com/download/win</a></li>
+                    <li>Download the installer</li>
+                    <li>Run it and keep clicking "Next" (default options are fine)</li>
+                    <li>Click "Install"</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>Visual Studio Code</h3>
+        <ul>
+            <li><strong>Download from:</strong> <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></li>
+            <li><strong>Installation steps:</strong>
+                <ol>
+                    <li>Click the big blue "Download for Windows" button</li>
+                    <li>Run the installer</li>
+                    <li>Keep clicking "Next" (all default options are fine)</li>
+                    <li>Click "Install"</li>
+                    <li>Launch VS Code when installation completes</li>
+                </ol>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>PART 2: Create Your GitHub Account</h2>
+
+        <p><strong>If you already have a GitHub account, skip this section.</strong></p>
+
+        <ol>
+            <li>Go to <a href="https://github.com/" target="_blank">https://github.com/</a></li>
+            <li>Click "Sign up" (top right corner)</li>
+            <li>Enter your email address</li>
+            <li>Create a password</li>
+            <li>Choose a username (like <code>mudassarkhattab</code> or anything you like)</li>
+            <li>Follow the verification steps</li>
+            <li>Choose the FREE plan</li>
+        </ol>
+
+        <hr>
+
+        <h2>PART 3: Set Up Git on Your Computer</h2>
+
+        <p>Open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run these commands one by one:</p>
+
+        <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"</code></pre>
+
+        <p><strong>Replace:</strong></p>
+        <ul>
+            <li><code>"Your Name"</code> with your actual name (e.g., "Mudassar Khattab")</li>
+            <li><code>"your-email@example.com"</code> with the email you used for GitHub</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <pre><code>git config --global user.name "Mudassar Khattab"
+git config --global user.email "mudassar@example.com"</code></pre>
+
+        <p><strong>To verify your configuration:</strong></p>
+        <pre><code>git config --global user.name
+git config --global user.email</code></pre>
+
+        <hr>
+
+        <h2>PART 4: Create a Repository on GitHub</h2>
+
+        <ol>
+            <li><strong>Log in to GitHub</strong> at <a href="https://github.com/" target="_blank">https://github.com/</a></li>
+            <li><strong>Click the "+" button</strong> (top right corner, next to your profile picture)</li>
+            <li><strong>Click "New repository"</strong></li>
+            <li><strong>Fill in the details:</strong>
+                <ul>
+                    <li><strong>Repository name:</strong> <code>MyPortfolio</code> (or any name you like)</li>
+                    <li><strong>Description:</strong> "My professional portfolio website"</li>
+                    <li><strong>Public or Private:</strong> Choose "Public" (so it can be hosted for free)</li>
+                    <li><strong>DO NOT</strong> check "Add a README file"</li>
+                    <li><strong>DO NOT</strong> add .gitignore or license</li>
+                </ul>
+            </li>
+            <li><strong>Click "Create repository"</strong></li>
+            <li><strong>Copy the repository URL</strong> - it will look like:
+                <pre><code>https://github.com/YOUR-USERNAME/MyPortfolio.git</code></pre>
+            </li>
+            <li>You will be navigated to the Repository Page</li>
+        </ol>
+
+        <hr>
+
+        <h2>PART 5: Connect Your Local Code to GitHub</h2>
+
+        <p>After creating the repository on GitHub, you need to connect your local project folder to it.</p>
+
+        <p><strong>Open Command Prompt or PowerShell</strong>, navigate to your project folder, and run:</p>
+
+        <pre><code>cd C:\Khattab\AIProjects\MyPortfolio
+git remote add origin REPOSITORY_URL_COPIED_ABOVE
+git branch -M main</code></pre>
+
+        <p><strong>Replace <code>REPOSITORY_URL_COPIED_ABOVE</code></strong> with the Repository URL you copied in Part 4 (Also, Refer the section "…or push an existing repository from the command line" on the Repository page)</p>
+
+        <p><strong>To verify the connection:</strong></p>
+        <pre><code>git remote -v</code></pre>
+
+        <p>You should see your GitHub repository URL listed.</p>
+
+        <hr>
+
+        <h2>PART 6: Open Your Project in Visual Studio Code</h2>
+
+        <ol>
+            <li><strong>Open Visual Studio Code</strong></li>
+            <li><strong>Click "File" → "Open Folder"</strong></li>
+            <li><strong>Navigate to</strong> <code>C:\Khattab\AIProjects\MyPortfolio</code></li>
+            <li><strong>Click "Select Folder"</strong></li>
+        </ol>
+
+        <p>You should now see all your portfolio files in the left sidebar!</p>
+
+        <hr>
+
+        <h2>PART 7: Using the Source Control Panel in VS Code</h2>
+
+        <h3>Step 1: Find the Source Control Panel</h3>
+        <ul>
+            <li>Look at the <strong>left sidebar</strong> in VS Code</li>
+            <li>Click the <strong>icon that looks like a branching tree</strong> (3rd icon from top)</li>
+            <li>OR press <code>Ctrl + Shift + G</code></li>
+        </ul>
+
+        <h3>Step 2: Understanding What You See</h3>
+
+        <p>You'll see a list of files with letters next to them:</p>
+        <ul>
+            <li><strong>U</strong> = Untracked (new file Git doesn't know about yet)</li>
+            <li><strong>M</strong> = Modified (file that was changed)</li>
+            <li><strong>A</strong> = Added (file ready to be committed)</li>
+            <li><strong>D</strong> = Deleted</li>
+        </ul>
+
+        <h3>Before moving to Step 3, please review if you are facing the below known problem</h3>
+
+        <h3>Known Problem: Seeing Files from Other Folders</h3>
+
+        <div class="highlight">
+            <p><strong>Problem:</strong> When you open the Source Control panel, you might see files from OTHER folders and projects that are NOT part of your portfolio. For example, you might see Excel files, PowerPoint presentations, or files from completely different projects.</p>
+
+            <p><strong>Why This Happens:</strong></p>
+
+            <p>This occurs when Git was accidentally initialized in a <strong>parent folder</strong> instead of your specific project folder.</p>
+
+            <p>For example:</p>
+            <ul>
+                <li><strong>What you want:</strong> Git tracking only <code>C:\Projects\MyPortfolio\</code> (your portfolio folder)</li>
+                <li><strong>What happened:</strong> Git is tracking <code>C:\Projects\</code> (the parent folder containing ALL your projects)</li>
+            </ul>
+
+            <p>When Git tracks a parent folder, VS Code shows ALL files from ALL sub-folders, making it confusing to know which files belong to your portfolio.</p>
+        </div>
+
+        <p><strong>How to Fix This:</strong></p>
+
+        <p><strong>Step 1: Initialize Git in Your Project Folder</strong></p>
+
+        <ol>
+            <li><strong>Open Command Prompt or PowerShell</strong></li>
+            <li><strong>Navigate to your project folder:</strong>
+                <pre><code>cd C:\YourPath\YourProjectFolder</code></pre>
+                Replace <code>C:\YourPath\YourProjectFolder</code> with the actual path to your portfolio folder
+            </li>
+            <li><strong>Initialize a new Git repository in this folder:</strong>
+                <pre><code>git init</code></pre>
+                You should see: <code>Initialized empty Git repository in C:/YourPath/YourProjectFolder/.git/</code>
+            </li>
+            <li><strong>Verify it worked:</strong>
+                <pre><code>git status</code></pre>
+                You should see a list of ONLY your project files, not files from other folders
+            </li>
+        </ol>
+
+        <p><strong>Step 2: Close and Reopen VS Code</strong></p>
+
+        <ol>
+            <li><strong>Close VS Code Completely</strong>
+                <ul>
+                    <li>Click <strong>File → Exit</strong> or press <code>Alt + F4</code></li>
+                    <li>Make sure VS Code is fully closed (check the taskbar)</li>
+                </ul>
+            </li>
+            <li><strong>Reopen VS Code</strong>
+                <ul>
+                    <li>Launch VS Code again</li>
+                    <li>Click <strong>"File" → "Open Folder"</strong></li>
+                    <li><strong>IMPORTANT:</strong> Select your <strong>specific project folder</strong>, NOT the parent folder
+                        <ul>
+                            <li><span class="checkmark">✅</span> <strong>Correct:</strong> <code>C:\Projects\MyPortfolio</code> (your project folder)</li>
+                            <li><span class="xmark">❌</span> <strong>Wrong:</strong> <code>C:\Projects</code> (parent folder containing multiple projects)</li>
+                        </ul>
+                    </li>
+                    <li>Click <strong>"Select Folder"</strong></li>
+                </ul>
+            </li>
+        </ol>
+
+        <p><strong>Step 3: Verify the Fix</strong></p>
+
+        <ol>
+            <li><strong>Open Source Control</strong> (<code>Ctrl + Shift + G</code>)</li>
+            <li><strong>You should now see ONLY your portfolio files:</strong>
+                <ul>
+                    <li>index.html</li>
+                    <li>styles.css</li>
+                    <li>script.js</li>
+                    <li>photo.jpg</li>
+                    <li>Any documentation files (.md files)</li>
+                </ul>
+            </li>
+            <li><strong>You should NOT see:</strong>
+                <ul>
+                    <li>Files from other projects</li>
+                    <li>Excel, Word, or PowerPoint files (unless they're part of your portfolio)</li>
+                    <li>Random folders or files you don't recognize</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p><strong>Still Seeing Other Files?</strong></p>
+
+        <p>If you still see files from other folders after following these steps:</p>
+        <ol>
+            <li>Check the <strong>bottom left</strong> of VS Code - it shows which folder is currently open</li>
+            <li>Make sure it shows your project folder name, not a parent folder</li>
+            <li>If it shows the wrong folder, close VS Code and repeat Step 2 above, carefully selecting the correct folder</li>
+        </ol>
+
+        <p><strong>Prevention Tip:</strong></p>
+
+        <p>Always open your <strong>specific project folder</strong> in VS Code, not a parent folder containing multiple projects. This ensures Git tracks only the files you want.</p>
+
+        <hr>
+
+        <h3>Step 3: Stage Your Changes</h3>
+        <p><strong>Staging = Selecting which files you want to save to GitHub</strong></p>
+
+        <ul>
+            <li><strong>To stage ONE file:</strong> Hover over the file and click the <strong>"+" button</strong></li>
+            <li><strong>To stage ALL files:</strong> Click the <strong>"+" button</strong> next to "Changes"</li>
+        </ul>
+
+        <h3>Step 4: Commit Your Changes</h3>
+        <p><strong>Committing = Save a snapshot with a descriptive message</strong></p>
+
+        <ol>
+            <li>After staging files, you'll see them under "Staged Changes"</li>
+            <li>At the top, there's a <strong>text box</strong> that says "Message"</li>
+            <li><strong>Type a short description</strong> like:
+                <ul>
+                    <li>"Initial commit - my portfolio website"</li>
+                    <li>"Added email gate feature"</li>
+                    <li>"Fixed mobile responsiveness"</li>
+                    <li>"Updated about section"</li>
+                </ul>
+            </li>
+            <li><strong>Press <code>Ctrl + Enter</code></strong> OR click the <strong>checkmark ✓ button</strong> above the message box</li>
+        </ol>
+
+        <p><strong>IMPORTANT:</strong> Always write a clear message so you know what you changed!</p>
+
+        <h3>Step 5: Push to GitHub</h3>
+        <p><strong>Pushing = Upload your code to GitHub</strong></p>
+
+        <ol>
+            <li>After committing, look for a <strong>cloud icon with an up arrow ↑</strong> at the bottom left</li>
+            <li><strong>Click it</strong> OR click the <strong>"..."</strong> (three dots) at the top of Source Control panel</li>
+            <li>Select <strong>"Push"</strong></li>
+        </ol>
+
+        <p><strong>First time only:</strong> VS Code might ask you to sign in to GitHub:</p>
+        <ul>
+            <li>Click "Allow"</li>
+            <li>A browser window will open</li>
+            <li>Sign in to GitHub</li>
+            <li>Click "Authorize"</li>
+            <li>Close the browser and return to VS Code</li>
+        </ul>
+
+        <hr>
+
+        <h2>PART 8: The Daily Workflow</h2>
+
+        <p>Every time you make changes to your portfolio, follow this simple workflow:</p>
+
+        <ol>
+            <li><strong>Open VS Code</strong> → Your portfolio folder</li>
+            <li><strong>Make your changes</strong> (edit HTML, CSS, JavaScript)</li>
+            <li><strong>Save your files</strong> (<code>Ctrl + S</code>)</li>
+            <li><strong>Go to Source Control</strong> (<code>Ctrl + Shift + G</code>)</li>
+            <li><strong>Review the changed files</strong> (they'll show up automatically)</li>
+            <li><strong>Stage the files</strong> (click the "+" next to each file or "Stage All")</li>
+            <li><strong>Write a commit message</strong> (describe what you changed)</li>
+            <li><strong>Commit</strong> (<code>Ctrl + Enter</code> or click ✓)</li>
+            <li><strong>Push to GitHub</strong> (click the upload icon ↑)</li>
+        </ol>
+
+        <hr>
+
+        <h2>PART 9: Visual Helpers in VS Code</h2>
+
+        <p>Understanding the visual indicators:</p>
+
+        <ul>
+            <li><strong>Blue dots</strong> next to files = File has unsaved changes</li>
+            <li><strong>Green bar</strong> on the left of code = New lines you added</li>
+            <li><strong>Red bar</strong> on the left = Lines you deleted</li>
+            <li><strong>Blue bar</strong> on the left = Lines you modified</li>
+            <li><strong>Numbers in Source Control icon</strong> = Number of files with changes</li>
+        </ul>
+
+        <hr>
+
+        <h2>Quick Reference Card</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>How to Do It</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>See what changed</td>
+                    <td><code>Ctrl + Shift + G</code> (Source Control)</td>
+                </tr>
+                <tr>
+                    <td>Stage one file</td>
+                    <td>Hover over file → Click "+"</td>
+                </tr>
+                <tr>
+                    <td>Stage all files</td>
+                    <td>Click "+" next to "Changes"</td>
+                </tr>
+                <tr>
+                    <td>Unstage a file</td>
+                    <td>Hover over staged file → Click "−"</td>
+                </tr>
+                <tr>
+                    <td>Commit</td>
+                    <td>Type message → <code>Ctrl + Enter</code></td>
+                </tr>
+                <tr>
+                    <td>Push to GitHub</td>
+                    <td>Click ↑ icon (bottom left)</td>
+                </tr>
+                <tr>
+                    <td>Pull from GitHub</td>
+                    <td>Click ↓ icon (bottom left)</td>
+                </tr>
+                <tr>
+                    <td>View file history</td>
+                    <td>Right-click file → "Open Timeline"</td>
+                </tr>
+                <tr>
+                    <td>Discard changes</td>
+                    <td>Right-click file → "Discard Changes"</td>
+                </tr>
+                <tr>
+                    <td>View diff</td>
+                    <td>Click on a changed file in Source Control</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>Keyboard Shortcuts</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Shortcut</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Ctrl + S</code></td>
+                    <td>Save current file</td>
+                </tr>
+                <tr>
+                    <td><code>Ctrl + Shift + G</code></td>
+                    <td>Open Source Control panel</td>
+                </tr>
+                <tr>
+                    <td><code>Ctrl + Enter</code></td>
+                    <td>Commit staged changes</td>
+                </tr>
+                <tr>
+                    <td><code>Ctrl + Shift + P</code></td>
+                    <td>Open Command Palette</td>
+                </tr>
+                <tr>
+                    <td><code>Ctrl + ~</code></td>
+                    <td>Open integrated terminal</td>
+                </tr>
+                <tr>
+                    <td><code>Ctrl + B</code></td>
+                    <td>Toggle sidebar visibility</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>Common Terms Explained</h2>
+
+        <ul>
+            <li><strong>Repository (Repo):</strong> A folder that Git tracks. Think of it as a project folder with history.</li>
+            <li><strong>Commit:</strong> A saved snapshot of your project at a specific point in time.</li>
+            <li><strong>Stage:</strong> Preparing files to be committed (like putting items in a shopping cart before checkout).</li>
+            <li><strong>Push:</strong> Uploading your commits from your computer to GitHub.</li>
+            <li><strong>Pull:</strong> Downloading updates from GitHub to your computer.</li>
+            <li><strong>Branch:</strong> A separate version of your code (like a parallel universe of your project).</li>
+            <li><strong>Main/Master:</strong> The primary branch of your project.</li>
+            <li><strong>Origin:</strong> The nickname for your GitHub repository.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>"Permission denied" error when pushing</h3>
+        <ul>
+            <li>You may need to authenticate with GitHub</li>
+            <li>VS Code will prompt you to sign in</li>
+            <li>Or use GitHub Desktop as an alternative</li>
+        </ul>
+
+        <h3>"Conflict" when pulling</h3>
+        <ul>
+            <li>This means someone else (or you on another computer) made changes</li>
+            <li>VS Code will show you the conflicts</li>
+            <li>You'll need to choose which version to keep</li>
+        </ul>
+
+        <h3>Can't see Source Control panel</h3>
+        <ul>
+            <li>Press <code>Ctrl + Shift + G</code></li>
+            <li>Or click View → Source Control</li>
+        </ul>
+
+        <h3>Files not showing in Source Control</h3>
+        <ul>
+            <li>Make sure you opened the correct folder</li>
+            <li>Check that Git is initialized (you should see a <code>.git</code> folder)</li>
+        </ul>
+
+        <hr>
+
+        <h2>Best Practices</h2>
+
+        <ol>
+            <li><strong>Commit often</strong> - Don't wait until you have 100 changes</li>
+            <li><strong>Write clear commit messages</strong> - Your future self will thank you</li>
+            <li><strong>Pull before you push</strong> - Especially if working from multiple computers</li>
+            <li><strong>Don't commit sensitive data</strong> - No passwords, API keys, or personal info</li>
+            <li><strong>Stage selectively</strong> - Only commit related changes together</li>
+            <li><strong>Test before committing</strong> - Make sure your code works</li>
+        </ol>
+
+        <hr>
+
+        <h2>Next Steps: Deploying Your Portfolio</h2>
+
+        <p>Once your code is on GitHub, you can deploy your portfolio for free using:</p>
+
+        <ul>
+            <li><strong>GitHub Pages</strong> (built into GitHub)</li>
+            <li><strong>Vercel</strong> (<a href="https://vercel.com/" target="_blank">https://vercel.com/</a>)</li>
+            <li><strong>Netlify</strong> (<a href="https://www.netlify.com/" target="_blank">https://www.netlify.com/</a>)</li>
+        </ul>
+
+        <p>We'll cover deployment in the next guide!</p>
+
+        <hr>
+
+        <h2>Additional Resources</h2>
+
+        <ul>
+            <li><strong>GitHub Docs:</strong> <a href="https://docs.github.com/" target="_blank">https://docs.github.com/</a></li>
+            <li><strong>VS Code Git Tutorial:</strong> <a href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank">https://code.visualstudio.com/docs/sourcecontrol/overview</a></li>
+            <li><strong>Git Cheat Sheet:</strong> <a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">https://education.github.com/git-cheat-sheet-education.pdf</a></li>
+        </ul>
+
+        <hr>
+
+        <p><strong>Created:</strong> 2026-05-09<br>
+        <strong>For:</strong> MyPortfolio Project<br>
+        <strong>Last Updated:</strong> 2026-05-09</p>
+
+        <p><strong>Changes done or copied from GitHub UI</strong><br>
+        <strong>Repository URL:</strong> <a href="https://github.com/mudassarGPC/MyRepositoryGPCVSS.git" target="_blank">https://github.com/mudassarGPC/MyRepositoryGPCVSS.git</a></p>
+    </div>
+</body>
+</html>
