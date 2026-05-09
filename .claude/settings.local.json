@@ -9,7 +9,8 @@
       "Bash(Test-Path .git)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(powershell.exe -Command \"Start-Process chrome ''C:\\\\Khattab\\\\AIProjects\\\\MyPortfolio\\\\index.html''\")"
     ]
   }
 }

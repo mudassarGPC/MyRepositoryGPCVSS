@@ -26,14 +26,15 @@ img {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.7; /* Increased for better readability */
+    line-height: 1.8; /* IMPROVED: Better readability with more generous line height */
     color: var(--text-color);
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased; /* Crisp text */
-    overflow-x: hidden; /* Prevent accidental horizontal scroll */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /* ADDED: Better font rendering on Mac */
+    overflow-x: hidden;
 }
 
 /* Premium Visual Details */
@@ -90,7 +91,12 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: center 10%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* IMPROVED: Multi-layer shadow for realistic depth */
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08),
+        0 24px 48px rgba(44, 62, 80, 0.1);
     transition: var(--transition);
     border: 10px solid white;
     box-sizing: content-box;
@@ -98,7 +104,12 @@ body {
 
 .profile-photo:hover {
     transform: scale(1.015);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(44, 62, 80, 0.08);
+    /* IMPROVED: Enhanced hover shadow with more layers */
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 12px 24px rgba(0, 0, 0, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.1),
+        0 32px 64px rgba(44, 62, 80, 0.12);
 }
 
 .content-column {
@@ -106,12 +117,12 @@ body {
 }
 
 h1 {
-    font-size: 4rem; /* Larger hero title */
+    font-size: 4rem;
     font-weight: 800;
     color: var(--primary-color);
     line-height: 1.05;
-    margin-bottom: 0.75rem;
-    letter-spacing: -1.5px; /* Refined tracking - not too tight */
+    margin-bottom: 1rem; /* IMPROVED: More space below title */
+    letter-spacing: -2px; /* IMPROVED: Tighter, more premium tracking */
 }
 
 .tagline {
@@ -158,7 +169,7 @@ footer {
 /* Timeline Section */
 .timeline-section {
     background-color: var(--secondary-bg);
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 6rem var(--spacing-md); /* IMPROVED: More vertical breathing room */
     border-top: 1px solid #f5f5f5;
 }
 
@@ -170,9 +181,9 @@ footer {
 .section-title {
     text-align: center;
     font-size: 2.75rem;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 4rem; /* IMPROVED: More space below title */
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px; /* IMPROVED: Tighter tracking */
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -180,6 +191,7 @@ footer {
     color: var(--primary-color);
     position: relative;
     padding-bottom: 1.5rem;
+    line-height: 1.2; /* IMPROVED: Better line height */
 }
 
 .section-title::after {
@@ -202,7 +214,7 @@ footer {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem; /* IMPROVED: More space between timeline items */
 }
 
 .timeline-date {
@@ -218,10 +230,14 @@ footer {
 
 .timeline-content {
     background: white;
-    padding: 1.75rem 2.25rem;
-    border-radius: 14px;
+    padding: 2rem 2.5rem; /* IMPROVED: More generous padding */
+    border-radius: 16px; /* IMPROVED: Consistent with other cards */
     border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    /* IMPROVED: Layered shadow system for depth */
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 4px 8px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     position: relative;
 }
@@ -240,9 +256,14 @@ footer {
 }
 
 .timeline-content:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
-    transform: translateY(-4px) scale(1.01);
-    border-color: rgba(44, 62, 80, 0.15);
+    /* IMPROVED: Multi-layer hover shadow for luxury feel */
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.06),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08),
+        0 24px 48px rgba(44, 62, 80, 0.1);
+    transform: translateY(-6px) scale(1.015); /* IMPROVED: More pronounced lift */
+    border-color: rgba(44, 62, 80, 0.12);
 }
 
 .timeline-content:hover::before {
@@ -271,7 +292,7 @@ footer {
 
 /* Hobbies Section */
 .hobbies-section {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 6rem var(--spacing-md); /* IMPROVED: More vertical breathing room */
     background-color: white;
 }
 
@@ -284,18 +305,22 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem; /* IMPROVED: More generous spacing between cards */
 }
 
 .hobby-card {
     background: linear-gradient(to bottom, #ffffff, #fafbfc);
-    padding: 2rem 1.5rem;
-    border-radius: 18px;
+    padding: 2.5rem 2rem; /* IMPROVED: More generous padding */
+    border-radius: 16px; /* IMPROVED: Consistent with other cards */
     text-align: center;
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.06);
-    flex: 0 1 270px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+    flex: 0 1 280px; /* IMPROVED: Slightly wider for better proportions */
+    /* IMPROVED: Layered shadow for depth */
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        0 4px 8px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06);
     position: relative;
     overflow: hidden;
 }
@@ -313,9 +338,14 @@ footer {
 }
 
 .hobby-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(44, 62, 80, 0.08);
-    border-color: rgba(44, 62, 80, 0.2);
+    transform: translateY(-8px) scale(1.02); /* IMPROVED: More lift on hover */
+    /* IMPROVED: Luxury multi-layer hover shadow */
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.06),
+        0 8px 16px rgba(0, 0, 0, 0.08),
+        0 16px 32px rgba(0, 0, 0, 0.1),
+        0 24px 48px rgba(44, 62, 80, 0.12);
+    border-color: rgba(44, 62, 80, 0.15);
 }
 
 .hobby-card:hover::before {
@@ -559,24 +589,29 @@ footer {
 .gate-form input {
     width: 100%;
     padding: 1.25rem 1.5rem;
-    border-radius: 12px;
+    border-radius: 16px; /* IMPROVED: Consistent with other elements */
     border: 2px solid #f0f0f0;
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
     background-color: var(--secondary-bg);
+    /* IMPROVED: Subtle shadow for depth */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .gate-form input:focus {
     outline: none;
     border-color: var(--accent-color);
     background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.05);
+    /* IMPROVED: Better focus ring with layered shadow */
+    box-shadow:
+        0 0 0 4px rgba(44, 62, 80, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .gate-form button {
     padding: 1.25rem;
-    border-radius: 12px;
+    border-radius: 16px; /* IMPROVED: Consistent with inputs */
     border: none;
     background-color: var(--accent-color);
     color: white;
@@ -584,12 +619,20 @@ footer {
     font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
+    /* IMPROVED: Subtle default shadow */
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(44, 62, 80, 0.12);
 }
 
 .gate-form button:hover {
     background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-3px); /* IMPROVED: More lift */
+    /* IMPROVED: Luxury hover shadow */
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.12),
+        0 16px 32px rgba(44, 62, 80, 0.15);
 }
 
 .gate-privacy {
